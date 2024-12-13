@@ -7,14 +7,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
-
-        if(animator != null )
-        {
-            Debug.Log("animator is attached correctly");
-        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         float speed = Input.GetAxisRaw("Horizontal");
@@ -30,5 +24,7 @@ public class PlayerController : MonoBehaviour
             scale.x = Mathf.Abs(speed);
         }
         transform.localScale = scale;
+
+        animator.SetBool("Crouch", Input.GetKey(KeyCode.C)) ;
     }
 }
