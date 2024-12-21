@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D Rb2D;
     public float speed = 0;
     public float jump = 0;
+
+    public ScoreController scoreController;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -41,6 +43,7 @@ public class PlayerController : MonoBehaviour
         if (horizontal < 0)
         {
             scale.x = -1f * Mathf.Abs(scale.x);
+    
         }
         else if (horizontal > 0)
         {
@@ -58,5 +61,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("Jump", false);
         }
 
+    }
+    public void PickUpKey()
+    {
+        Debug.Log("Player picked the key");
+        scoreController.IncreaseScore(10);
     }
 }
