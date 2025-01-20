@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
@@ -66,5 +67,18 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("Player picked the key");
         scoreController.IncreaseScore(10);
+    }
+
+    public void KillPlayer()
+    {
+        Debug.Log("player killed by enemy..");
+        //Destroy(gameObject);
+        ReloadLevel();
+    }
+
+    private void ReloadLevel()
+    {
+     
+        SceneManager.LoadScene(0);
     }
 }
