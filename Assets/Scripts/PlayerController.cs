@@ -69,11 +69,16 @@ public class PlayerController : MonoBehaviour
         scoreController.IncreaseScore(10);
     }
 
-    public void KillPlayer()
+    public void KillPlayer(float dmg)
     {
         Debug.Log("player killed by enemy..");
-        //Destroy(gameObject);
-        ReloadLevel();
+        PlayerStats.Instance.TakeDamage(dmg);
+        if(PlayerStats.Instance.Health <= 0)
+        {
+            Destroy(gameObject);
+            ReloadLevel();
+        }
+
     }
 
     private void ReloadLevel()
