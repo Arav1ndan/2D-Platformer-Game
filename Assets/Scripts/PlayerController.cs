@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         PlayerStats.Instance.TakeDamage(dmg);
         if(PlayerStats.Instance.Health <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             ReloadLevel();
         }
 
@@ -84,6 +84,6 @@ public class PlayerController : MonoBehaviour
     private void ReloadLevel()
     {
      
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("QuitScene");
     }
 }
