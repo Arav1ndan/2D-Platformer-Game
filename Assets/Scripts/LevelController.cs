@@ -8,7 +8,7 @@ public class LevelController : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("Player Reached the end!!..");
-            SceneManager.LoadScene("Level-2");
+            SceneManager.LoadScene(0);
         }
     }
 }
