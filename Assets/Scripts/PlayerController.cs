@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float jump = 0;
 
     public ScoreController scoreController;
+    public GameObject gameOverPanel;
     void Start()
     {
         animator = gameObject.GetComponent<Animator>();
@@ -61,7 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("Jump", false);
         }
-
     }
     public void PickUpKey()
     {
@@ -76,14 +76,20 @@ public class PlayerController : MonoBehaviour
         if(PlayerStats.Instance.Health <= 0)
         {
             //Destroy(gameObject);
-            ReloadLevel();
+          
+            GameOverController();
         }
-
     }
 
-    private void ReloadLevel()
+    private void GameOverController()
     {
-     
-        SceneManager.LoadScene("QuitScene");
+        if (PlayerStats.Instance.Health <= 0)
+        {
+            gameOverPanel.SetActive(true);
+        }
+        else
+        {
+            gameOverPanel.SetActive(false);
+        } 
     }
 }
