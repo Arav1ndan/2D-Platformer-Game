@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class lobbyController : MonoBehaviour
 {
     public Button PlayButton;
+    public GameObject LevelSelection;
 
     private void Awake()
     {
@@ -13,6 +14,7 @@ public class lobbyController : MonoBehaviour
 
     private void PlayGame()
     {
-        SceneManager.LoadScene(1);
+        //SceneManager.LoadScene(1);
+        LevelSelection.SetActive(true);
     }
 }

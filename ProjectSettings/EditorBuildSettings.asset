@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/lobby.unity
     guid: 3a46aa8073dff7744a2d6a6be0f747bf
   - enabled: 1
-    path: Assets/Scenes/2dRunner.unity
+    path: Assets/Scenes/level1.unity
     guid: 70bbd4d89d0167f4db80438434b118a8
+  - enabled: 1
+    path: Assets/Scenes/level2.unity
+    guid: d48379e2e2c0d05458408456e0d4e073
+  - enabled: 1
+    path: Assets/Scenes/level3.unity
+    guid: c48946bd2c8979b4ba43f0d4fc93fa7f
+  - enabled: 1
+    path: Assets/Scenes/level4.unity
+    guid: c8baf82ef4711ba4e9b6cbb239a7f5cb
   - enabled: 1
     path: Assets/Scenes/QuitScene.unity
     guid: e208c873e20e6ac419578166234840c3
