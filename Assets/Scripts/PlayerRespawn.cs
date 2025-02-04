@@ -7,6 +7,7 @@ public class PlayerRespawn : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
             Debug.Log("Player Died...");
+            SoundManager.Instance.Play(Sounds.LevelFail);
             Scene currentScene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(currentScene.name);
         }

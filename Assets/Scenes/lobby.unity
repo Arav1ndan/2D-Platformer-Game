@@ -1702,8 +1702,14 @@ MonoBehaviour:
   Sounds:
   - SoundTypes: 0
     soundClips: {fileID: 8300000, guid: df6d1af64fdebb04d80a54b27b720509, type: 3}
-  - SoundTypes: 0
-    soundClips: {fileID: 0}
+  - SoundTypes: 1
+    soundClips: {fileID: 8300000, guid: 0651b56880a11ef45909b779443691aa, type: 3}
+  - SoundTypes: 3
+    soundClips: {fileID: 8300000, guid: 31b2284e8ab3f244182080ca7da474b7, type: 3}
+  - SoundTypes: 5
+    soundClips: {fileID: 8300000, guid: f7d80757580ebf14287ba18254f7fe3d, type: 3}
+  isMute: 0
+  Volume: 1
 --- !u!1 &1322143526
 GameObject:
   m_ObjectHideFlags: 0
