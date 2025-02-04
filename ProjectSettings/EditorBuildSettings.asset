@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/2dRunner.unity
+    path: Assets/Scenes/lobby.unity
+    guid: 3a46aa8073dff7744a2d6a6be0f747bf
+  - enabled: 1
+    path: Assets/Scenes/2dRunner.unity
     guid: 70bbd4d89d0167f4db80438434b118a8
+  - enabled: 1
+    path: Assets/Scenes/QuitScene.unity
+    guid: e208c873e20e6ac419578166234840c3
   m_configObjects: {}
