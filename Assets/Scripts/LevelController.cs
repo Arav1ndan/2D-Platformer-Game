@@ -10,6 +10,7 @@ public class LevelController : MonoBehaviour
         {
             Debug.Log("Player Reached the end!!..");
             LevelManager.Instance.MarkLevelComplete();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             gameOverController.SetActive(true);
         }
     }

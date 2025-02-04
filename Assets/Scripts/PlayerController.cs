@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         position.x += horizontal * speed * Time.deltaTime;
         transform.position = position;
 
-        if (vertical > 0)
+        if (vertical > 0 && Mathf.Abs(Rb2D.velocity.y) < 0.01f)
         {
             Rb2D.AddForce(new Vector2(0f, jump), ForceMode2D.Force);
         }
@@ -86,6 +86,8 @@ public class PlayerController : MonoBehaviour
         if (PlayerStats.Instance.Health <= 0)
         {
             gameOverPanel.SetActive(true);
+            SoundManager.Instance.PlayMusic(Sounds.PlayerDeath);
+                
         }
         else
         {
